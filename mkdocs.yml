@@ -1,6 +1,6 @@
 site_name: ABFML
 site_description: "A machine learning force field framework based on PyTorch"
-site_url: https://gengxingze.github.io/ABFML/
+# site_url: https://gengxingze.github.io/ABFML/
 repo_url: https://github.com/gengxingze/ABFML
 repo_name: gengxingze/ABFML
 
