@@ -1,0 +1,73 @@
+site_name: ABFML
+site_description: "A machine learning force field framework based on PyTorch"
+site_url: https://gengxingze.github.io/ABFML/
+repo_url: https://github.com/gengxingze/ABFML
+repo_name: gengxingze/ABFML
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+  logo: assets/logo.png   # 你可以放自己的 logo
+  favicon: assets/favicon.png
+  features:
+    - navigation.tabs
+    - navigation.expand
+    - navigation.instant
+    - navigation.top
+    - content.code.copy
+    - content.code.annotate
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+
+nav:
+  - Home: index.md
+  - Tutorial: tutorials/index.md
+  - Document:
+      - install: install.md
+      - Command-line Interface: cli.md
+      - FAQ: faq.md
+  - API:
+      - core:
+          - Loss: api/core/loss.md
+          - Model:
+              - method: api/core/model/method.md
+          - Optimizer: api/core/optimizer.md
+      - Data: api/data.md
+      - Entrypoints:
+          - Train: api/entrypoints/train.md
+          - Valid: api/entrypoints/valid.md
+          - Check: api/entrypoints/check.md
+          - Main_parser: api/entrypoints/main_parser.md
+      - Utils: api/utils.md
+  - Citation: citation.md
+  - Communicate: communicate.md
+
+plugins:
+  - search:
+      lang: zh
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            show_source: true
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.keys
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/gengxingze/ABFML
+  generator: false
